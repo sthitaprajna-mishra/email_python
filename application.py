@@ -16,7 +16,6 @@ def register():
 	messagein = request.form.get("message")
 	if not password or not sender or not messagein or not receiver:
 		return render_template("failure.html")
-	#message = f"Hi {messagein}! I'm sending this message through Gmail using an indigenous Python web-app built from scratch. Hope this message reaches you. Cheers!"
 	server = smtplib.SMTP("smtp.gmail.com", 587)
 	server.starttls()
 	server.login(sender, password)
