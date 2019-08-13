@@ -2,20 +2,11 @@ from flask import Flask, render_template, request, redirect
 import smtplib
 import os
 
-
 app = Flask(__name__)
-
-students = []
 
 @app.route("/")
 def index():
 	return render_template("index.html")
-
-'''
-@app.route("/registrants")
-def registrants():
-	return render_template("registered.html", students = students)
-'''
 
 @app.route("/register", methods = ["POST"])
 def register():
@@ -31,13 +22,6 @@ def register():
 	server.login(sender, password)
 	server.sendmail(sender, receiver, messagein)
 	return render_template("success.html")
-
-
-
-
-
-
-
 
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
