@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class = "container-fluid">
+
+	<h2>Send E-Mail via Python!</h2>
+
+<div class = "row">
+	<p>
+	<div class="col-xs-7 col-sm-6 col-lg-8">
+	<p>
+	This is an indigenous third party Python web application which is able to send mails without requiring you to follow through the traditional process of writing an email. Instead of all the hassle, you can just load this app and simply give the bare minimum details to send your emails in a fast and efficient manner.
+	</p>
+	</div>
+	</p>
+</div>
+
+<div class = "row">
+	<p>
+	<div class="col-xs-7 col-sm-6 col-lg-8">
+    <div class="panel panel-info">
+    	
+      <div class="panel-heading">Important Note: </div>
+      <div class="panel-body">Before you login, make sure your email id provider has authorized access to third party apps. If you use Gmail, go to <a href = "https://myaccount.google.com/lesssecureapps">this</a> link and verify if access is permitted or not.</div>
+
+    </div>
+	</div>
+	</p>
+</div>
+
+
+<div class = "row">
+
+	<div class = "col-xs-7 col-sm-6 col-lg-8">
+
+		<form autocomplete = "off" action = "/register" method = "POST">
+
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">Your email address</label>
+		    <input name = "sender" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+		    <small id="emailHelp" class="form-text text-muted">We'll never share these details with anyone else.</small>
+		  </div>
+
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">Your password</label>
+		    <input name = "password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+		  </div>
+
+		  <div class="form-group">
+		    <label for="exampleInputEmail2">Receiver's email address</label>
+		    <input name = "receiver" type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+		  </div>
+
+		  <div class="form-group">
+	    	<label for="exampleFormControlTextarea1">Message</label>
+	    	<textarea name = "message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+	  	</div>
+
+		  <button type="submit" class="btn btn-primary">Send</button>
+		</form>
+	</div>
+</div>
+</div>
+
+{% endblock %}
